@@ -2,6 +2,9 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Review from "@/components/review";
+import FeatureCard from "@/components/feature-card";
+import BusinessCard from "@/components/business-card";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +25,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      {/* <section>
         <Image
           src="/images/email-examples.webp"
           alt="dashboard"
@@ -35,9 +38,9 @@ export default function Home() {
           width={200}
           height={200}
         />
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <h2>
           Audienceful is email marketing re-invented for the 2020s. It's
           multiplayer, lightweight and setup for best practices by default.
@@ -62,9 +65,9 @@ export default function Home() {
             img="/images/mewn-2.jpg"
           />
         </div>
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section className="grid grid-cols-7">
         <Image
           src="/images/1-mccann.webp"
           alt="1-mccann"
@@ -171,9 +174,9 @@ export default function Home() {
           width={200}
           height={200}
         />
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <div>
           <Image
             src="/images/webflow.webp"
@@ -198,9 +201,9 @@ export default function Home() {
             live with your team like you're in Notion or Google Docs.
           </p>
         </div>
-      </section>
+      </section> */}
 
-      <section>
+      {/* <section>
         <div>
           <p>
             Multiple workspaces. Create custom spaces for all of your businesses
@@ -233,7 +236,190 @@ export default function Home() {
             height={500}
           />
         </div>
-      </section>
+      </section> */}
+
+      {/* <section>
+        <div>
+          <p>
+            Automate email sequences. Create simple drip sequences for any use
+            case, including onboarding, lead magnets, email courses, trial
+            nurturing...anything.
+          </p>
+          <Image
+            src="/images/builder.webp"
+            alt="builder"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div>
+          <p>
+            Publish to your website. Cross-post emails and SEO content directly
+            to CMS platforms like Webflow.
+          </p>
+          <Image
+            src="/images/feature-webflow.webp"
+            alt="feature"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div>
+          <p>
+            Integrate anywhere. ‍Sync data and contacts from your CRM, Payment
+            Processor, and 4000+ tools via Zapier or API.
+          </p>
+          <Image
+            src="/images/integrations.webp"
+            alt="integrations"
+            width={500}
+            height={500}
+          />
+        </div>
+        <div>
+          <h3>...and much more. ‍‍Join thousands making the switch.</h3>
+          <div>
+            <FeatureCard
+              icon="/icon/deliverability.svg"
+              title="Deliverability by Mailgun®"
+              subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            />
+            <FeatureCard
+              icon="/icon/sla.svg"
+              title="Deliverability by Mailgun®"
+              subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            />
+            <FeatureCard
+              icon="/icon/api.svg"
+              title="Deliverability by Mailgun®"
+              subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            />
+            <FeatureCard
+              icon="/icon/mergetags.svg"
+              title="Deliverability by Mailgun®"
+              subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            />
+            <FeatureCard
+              icon="/icon/support.svg"
+              title="Deliverability by Mailgun®"
+              subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            />
+            <FeatureCard
+              icon="/icon/personalization.svg"
+              title="Deliverability by Mailgun®"
+              subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            />
+          </div>
+        </div>
+      </section> */}
+
+      {/* <section>
+        <h2>Powering businesses of all shapes and sizes.</h2>
+        <div>
+          <BusinessCard
+            img="/images/joe.webp"
+            badge="Retall"
+            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            icon="/images/cl-joe.webp"
+          />
+          <BusinessCard
+            img="/images/weekend.webp"
+            badge="Finance"
+            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            icon="/images/signatureblock.webp"
+          />
+          <BusinessCard
+            img="/images/soho.webp"
+            badge="Entertainment"
+            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            icon="/images/cl-soho.webp"
+          />
+          <BusinessCard
+            img="/images/makebuild.webp"
+            badge="Agencles"
+            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            icon="/images/cl-makebuild.webp"
+          />
+          <BusinessCard
+            img="/images/case-moov.webp"
+            badge="Startups"
+            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            icon="/images/cl-moov.webp"
+          />
+        </div>
+      </section> */}
+
+      {/* <section>
+        <div>
+          <h1>Start now.</h1>
+          <p>Your first 1,000 subscribers are totally free.</p>
+          <button>Join Free</button>
+        </div>
+        <div>
+          <Image
+            src="/images/ui-preview.webp"
+            alt="signup"
+            width={500}
+            height={500}
+          />
+        </div>
+      </section> */}
+
+      {/* <footer>
+        <div>
+          <h6>Product</h6>
+          <div>
+            <Link href="/Overview">Overview</Link>
+            <Link href="/Email newslatters">Email newslatters</Link>
+            <Link href="/Marketing automation">Marketing automation</Link>
+            <Link href="/Webflow integration">Webflow integration</Link>
+            <Link href="/use cases">use cases</Link>
+          </div>
+        </div>
+
+        <div>
+          <h6>Resources</h6>
+          <div>
+            <Link href="/Help center">Help center</Link>
+            <Link href="/API docs">API docs</Link>
+            <Link href="/Changelog">Changelog</Link>
+            <Link href="/Blog">Blog</Link>
+            <Link href="/Emailspiration">Emailspiration</Link>
+          </div>
+        </div>
+
+        <div>
+          <h6>Company</h6>
+          <div>
+            <Link href="/Pricing">Pricing</Link>
+            <Link href="/Follow us on Twitter">Follow us on Twitter</Link>
+            <Link href="/Email us">Email us</Link>
+            <Link href="/Policies">Policies</Link>
+            <Link href="/GDPR">GDPR</Link>
+          </div>
+        </div>
+
+        <div>
+          <h6>Monthly newsletter</h6>
+          <p>
+            Get pro tips for automating your marketing workflows and be the
+            first to hear about new tools and features:
+          </p>
+          <div>
+            <input placeholder="Enter your email" />
+            <Image
+              src="/icon/right-arrow.png"
+              alt="subscribe"
+              width={20}
+              height={20}
+            />
+          </div>
+          <div>
+            <Link href="/Privacy">Privacy</Link>
+            <Link href="/Terms">Terms</Link>
+          </div>
+        </div>
+      </footer> */}
     </main>
   );
 }
