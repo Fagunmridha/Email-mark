@@ -2,10 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
+import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <nav className="py-5 flex flex-row justify-between items-center">
+    <nav className="py-5 flex flex-row justify-between items-center]">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/icon/audienceful-logo.png"
@@ -15,7 +16,9 @@ const Navbar = () => {
         />
         <p className="text-xl  text-[#222222] font-bold">audienceful</p>
       </Link>
-      <div className=" flex  items-center flex-row gap-8">
+      {/* <IoMenu /> */}
+
+      <div className=" flex  items-center flex-row gap-8 ">
         <Link
           href="/features"
           className="text-[16px] py-2 px-3 rounded-xl font-normal text-[#333333] hover:bg-slate-200"

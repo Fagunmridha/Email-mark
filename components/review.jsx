@@ -3,7 +3,7 @@ import React from "react";
 
 const Review = ({ review, name, designation, img }) => {
   return (
-    <div className="max-w-[390px] bg-gray-200 p-8 rounded-xl">
+    <div className="max-w-[390px] h-[218px] bg-gray-200 p-8 rounded-xl">
       <div className="mb-9">
         <p className="text-gray-400">{review}</p>
       </div>
