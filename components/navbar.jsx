@@ -6,7 +6,7 @@ import { IoMenu } from "react-icons/io5";
 
 const Navbar = () => {
   return (
-    <nav className="py-5 flex flex-row justify-between items-center]">
+    <nav className=" py-8 px-8 flex flex-row justify-between items-center]">
       <Link href="/" className="flex items-center gap-2">
         <Image
           src="/icon/audienceful-logo.png"

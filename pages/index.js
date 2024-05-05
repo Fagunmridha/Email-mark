@@ -10,10 +10,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="max-w-[2200px] px-6">
+    <main className="max-w-[2200px] ">
       {/* <Navbar /> */}
 
-      <section className="py-14 flex flex-col justify-center items-center">
+      <section className="py-14 flex flex-col justify-center items-center px-5">
         <div className="max-w-[700px] text-center">
           <h1 className="md:text-[125px]  text-[72px] font-extrabold md:font-bold text-[#222222] leading-none">
             Better <br />
@@ -74,7 +74,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid grid-cols-4 md:grid-cols-7 gap-4">
+      <section className="grid grid-cols-4 md:grid-cols-7 gap-4 md:px-[350px]">
         <Image
           src="/images/1-mccann.webp"
           alt="1-mccann"
@@ -195,7 +195,7 @@ export default function Home() {
         />
       </section>
 
-      <section className="">
+      <section className=" py-20">
         <div className="flex flex-col md:flex-row items-center mb-10 justify-center">
           <Image
             src="/images/webflow.webp"
@@ -203,7 +203,7 @@ export default function Home() {
             width={1000}
             height={1000}
           />
-          <p className="md:text-[38px] text-xl font-bold text-gray-300 md:leading-10 md:px-40">
+          <p className="md:text-[38px]  text-xl font-bold text-gray-300 md:leading-10 md:px-40">
             <span className="text-black">Easy as writing a doc.</span> No more
             clunky email builders. Collaborate live with your team like you're
             in Notion or Google Docs.
@@ -227,10 +227,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" md:max-w-[1500px] py-40">
-        <div className="flex md:flex-row flex-col items-center  justify-between ">
-          <p className="md:text-[38px] text-3xl  font-bold text-cyan-950 md:px-[250px]">
-            <span className=" text-red-400"> Multiple workspaces. </span>Create
+      <section className=" md:max-w-[1950px]  md:py-40 bg-black px-5">
+        <div className="flex md:flex-row flex-col items-center  justify-between  md:px-[50px]">
+          <p className="md:text-[38px] text-2xl  font-bold text-gray-500 md:px-[400px] leading-none py-8 hidden md:block">
+            <span className=" text-white"> Multiple workspaces. </span>Create
             custom spaces for all of your businesses or clients and easily
             switch between them.
           </p>
@@ -239,11 +239,16 @@ export default function Home() {
             alt=""
             width={600}
             height={600}
-            className=" rounded-3xl"
+            className=" rounded-3xl "
           />
+          <p className="md:text-[38px] text-2xl  font-bold text-gray-500 md:px-[400px] leading-none py-8 block md:hidden">
+            <span className=" text-white"> Multiple workspaces. </span>Create
+            custom spaces for all of your businesses or clients and easily
+            switch between them.
+          </p>
         </div>
 
-        <div className=" flex flex-col items-center justify-center py-20">
+        <div className=" flex flex-col items-center justify-center md:py-20 py-10">
           <Image
             src="/images/filter.webp"
             alt=""
@@ -251,18 +256,16 @@ export default function Home() {
             height={900}
             className="rounded-3xl"
           />
-          <p className="md:text-[38px] text-3xl font-bold text-cyan-950 md:px-[300px] items-center justify-center mt-20">
-            Different emails for different groups. Segment your subscribers into
-            multiple audiences with tags, custom fields and powerful
-            conditionals.
+          <p className="md:text-[38px] text-2xl font-bold text-gray-500 md:px-[400px] leading-none items-center justify-center mt-10 md:mt-20 ">
+            <span className="text-white">
+              Different emails for different groups.
+            </span>{" "}
+            Segment your subscribers into multiple audiences with tags, custom
+            fields and powerful conditionals.
           </p>
         </div>
 
-        <div className="flex md:flex-row flex-col items-center  justify-between ">
-          <p className="md:text-[38px] text-3xl  font-bold text-cyan-950 md:px-[250px]">
-            Grow faster. Collect signups with forms, use that data to
-            personalize emails, and track per-subscriber events and analytics.
-          </p>
+        <div className="flex md:flex-row flex-col items-center  justify-between md:px-40">
           <Image
             src="/images/audienceful-forms3.webp"
             alt=" audience"
@@ -270,12 +273,17 @@ export default function Home() {
             height={600}
             className=" rounded-3xl"
           />
+          <p className="md:text-[38px] text-2xl  leading-none font-bold text-gray-500 md:px-[250px]">
+            <span className="text-white"> Grow faster.</span> Collect signups
+            with forms, use that data to personalize emails, and track
+            per-subscriber events and analytics.
+          </p>
         </div>
       </section>
 
-      <section className=" bg-slate-200 px-28">
+      <section className="  md:px-28 md:py-52 py-10 px-5">
         <div className="flex flex-col  items-center justify-center mb-20">
-          <p className="text-4xl font-bold px-[400px] mb-10 text-white">
+          <p className="md:text-4xl font-bold md:px-[400px] mb-10 text-gray-500 hidden md:block">
             <span className="text-black"> Automate email sequences.</span>{" "}
             Create simple drip sequences for any use case, including onboarding,
             lead magnets, email courses, trial nurturing...anything.
@@ -287,8 +295,13 @@ export default function Home() {
             height={700}
             className=" rounded-3xl"
           />
+          <p className="md:text-4xl text-xl font-bold md:px-[400px] mb-10 text-gray-500 block md:hidden mt-5">
+            <span className="text-black"> Automate email sequences.</span>{" "}
+            Create simple drip sequences for any use case, including onboarding,
+            lead magnets, email courses, trial nurturing...anything.
+          </p>
         </div>
-        <div className="flex flex-row  items-center justify-center">
+        {/* <div className="flex flex-row  items-center justify-center">
           <Image
             src="/images/feature-webflow.webp"
             alt="feature"
@@ -296,14 +309,14 @@ export default function Home() {
             height={700}
             className=" rounded-3xl"
           />
-          <p className="text-4xl font-bold px-[250px] text-white">
+          <p className="text-4xl font-bold px-[250px] text-gray-500">
             <span className="text-black"> Publish to your website.</span>{" "}
             Cross-post emails and SEO content directly to CMS platforms like
             Webflow.
           </p>
-        </div>
-        <div className="flex flex-row items-center justify-center">
-          <p className="text-4xl px-[250px] font-bold text-white">
+        </div> */}
+        {/* <div className="flex flex-row items-center justify-center">
+          <p className="text-4xl px-[250px] font-bold text-gray-500">
             <span className="text-black">Integrate anywhere. </span>‍Sync data
             and contacts from your CRM, Payment Processor, and 4000+ tools via
             Zapier or API.
@@ -315,9 +328,12 @@ export default function Home() {
             height={700}
             className="rounded-3xl"
           />
-        </div>
-        <div className="items-center justify-center flex flex-col mt-20">
-          <h3>...and much more. ‍‍Join thousands making the switch.</h3>
+        </div> */}
+        {/* <div className="items-center justify-center flex flex-col mt-20">
+          <h3 className="items-center text-center text-4xl font-bold mb-10 text-gray-400">
+            <span className="text-black">...and much more.</span> ‍<br />
+            Join thousands making the switch.
+          </h3>
           <div className="grid grid-cols-3 gap-6">
             <FeatureCard
               icon="/icon/deliverability.svg"
@@ -350,65 +366,66 @@ export default function Home() {
               subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
             />
           </div>
-        </div>
+        </div> */}
       </section>
 
-      {/* <section>
-        <h2>Powering businesses of all shapes and sizes.</h2>
-        <div>
+      {/* <section className="mt-20 px-28 bg-slate-200 py-40">
+        <h2 className=" text-4xl font-bold mb-10 text-gray-400 ">
+          <span className="text-black"> Powering </span>businesses of <br />
+          all shapes and sizes.
+        </h2>
+        <div className="flex items-center gap-9">
           <BusinessCard
             img="/images/joe.webp"
             badge="Retall"
-            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            subtitle="Joe & The Juice use audience to keep thousend of emploess on the loop across 300+ global location not into ther are not."
             icon="/images/cl-joe.webp"
           />
           <BusinessCard
             img="/images/weekend.webp"
             badge="Finance"
-            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            subtitle="Rayan Hoover (founder of product hunt ) and vedika jens use audience rn ther popular newstleer about runing a "
             icon="/images/signatureblock.webp"
           />
           <BusinessCard
             img="/images/soho.webp"
             badge="Entertainment"
-            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            subtitle="Soho Live Music Club use audience to promoteevents and drive sels at their 3 award-wining music venus in heart."
             icon="/images/cl-soho.webp"
           />
           <BusinessCard
             img="/images/makebuild.webp"
             badge="Agencles"
-            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
+            subtitle="Make Build, a shofify and webflow enterprice and agency partner use audinceful to keep their team inspired."
             icon="/images/cl-makebuild.webp"
-          />
-          <BusinessCard
-            img="/images/case-moov.webp"
-            badge="Startups"
-            subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
-            icon="/images/cl-moov.webp"
           />
         </div>
       </section> */}
 
-      {/* <section>
+      {/* <section className="mt-40 items-center text-center flex flex-col">
         <div>
-          <h1>Start now.</h1>
-          <p>Your first 1,000 subscribers are totally free.</p>
-          <button>Join Free</button>
+          <h1 className="text-[100px] font-bold ">Start now.</h1>
+          <p className="text-gray-500 font-medium mb-5">
+            Your first 1,000 subscribers are totally free.
+          </p>
+          <button className="text-white text-xl font-medium bg-sky-700 px-4 py-2 rounded-xl mb-10">
+            Join Free
+          </button>
         </div>
-        <div>
+        <div className="">
           <Image
             src="/images/ui-preview.webp"
             alt="signup"
-            width={500}
-            height={500}
+            width={1600}
+            height={1600}
           />
         </div>
       </section> */}
 
-      {/* <footer>
-        <div>
-          <h6>Product</h6>
-          <div>
+      {/* <footer className="items-center flex flex-row justify-between px-8 py-32 bg-black">
+        <div className="">
+          <h6 className="text-white text-xl font-bold">Product</h6>
+          <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
             <Link href="/Overview">Overview</Link>
             <Link href="/Email newslatters">Email newslatters</Link>
             <Link href="/Marketing automation">Marketing automation</Link>
@@ -418,8 +435,8 @@ export default function Home() {
         </div>
 
         <div>
-          <h6>Resources</h6>
-          <div>
+          <h6 className="text-white text-xl font-bold">Resources</h6>
+          <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
             <Link href="/Help center">Help center</Link>
             <Link href="/API docs">API docs</Link>
             <Link href="/Changelog">Changelog</Link>
@@ -429,8 +446,8 @@ export default function Home() {
         </div>
 
         <div>
-          <h6>Company</h6>
-          <div>
+          <h6 className="text-white text-xl font-bold">Company</h6>
+          <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
             <Link href="/Pricing">Pricing</Link>
             <Link href="/Follow us on Twitter">Follow us on Twitter</Link>
             <Link href="/Email us">Email us</Link>
@@ -439,24 +456,30 @@ export default function Home() {
           </div>
         </div>
 
-        <div>
-          <h6>Monthly newsletter</h6>
-          <p>
-            Get pro tips for automating your marketing workflows and be the
-            first to hear about new tools and features:
+        <div className="">
+          <h6 className="text-white text-xl font-bold">Monthly newsletter</h6>
+          <p className="text-[#666666] text-xl mb-5 mt-5">
+            Get pro tips for automating your marketing workflows <br />
+            and be the first to hear about new tools and features:
           </p>
-          <div>
-            <input placeholder="Enter your email" />
-            <Image
-              src="/icon/right-arrow.png"
-              alt="subscribe"
-              width={20}
-              height={20}
+          <div className="flex flex-grow">
+            <input
+              placeholder="Enter your email"
+              className="px-5 py-2 rounded-l-md"
             />
+            <button className="">
+              {" "}
+              <Image
+                src="/icon/right-arrow.png"
+                alt="subscribe"
+                width={20}
+                height={20}
+              />
+            </button>
           </div>
-          <div>
-            <Link href="/Privacy">Privacy</Link>
-            <Link href="/Terms">Terms</Link>
+          <div className="text-[#666] mt-5 flex gap-5">
+            <p>Privacy</p>
+            <p>Terms</p>
           </div>
         </div>
       </footer> */}
