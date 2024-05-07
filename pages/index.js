@@ -227,7 +227,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className=" md:max-w-[1950px]  md:py-40 bg-black px-5">
+      <section className=" md:max-w-[1950px] py-20 md:py-40 bg-black px-5">
         <div className="flex md:flex-row flex-col items-center  justify-between  md:px-[50px]">
           <p className="md:text-[38px] text-2xl  font-bold text-gray-500 md:px-[400px] leading-none py-8 hidden md:block">
             <span className=" text-white"> Multiple workspaces. </span>Create
@@ -301,7 +301,7 @@ export default function Home() {
             lead magnets, email courses, trial nurturing...anything.
           </p>
         </div>
-        {/* <div className="flex flex-row  items-center justify-center">
+        <div className="flex md:flex-row flex-col  items-center justify-center">
           <Image
             src="/images/feature-webflow.webp"
             alt="feature"
@@ -309,14 +309,14 @@ export default function Home() {
             height={700}
             className=" rounded-3xl"
           />
-          <p className="text-4xl font-bold px-[250px] text-gray-500">
+          <p className="md:text-4xl  text-2xl font-bold md:px-[250px] text-gray-500 mt-5 mb-20">
             <span className="text-black"> Publish to your website.</span>{" "}
             Cross-post emails and SEO content directly to CMS platforms like
             Webflow.
           </p>
-        </div> */}
-        {/* <div className="flex flex-row items-center justify-center">
-          <p className="text-4xl px-[250px] font-bold text-gray-500">
+        </div>
+        <div className="flex md:flex-row flex-col items-center justify-center mb-20">
+          <p className="md:text-4xl  md:px-[250px] font-bold text-gray-500 hidden md:block">
             <span className="text-black">Integrate anywhere. </span>‍Sync data
             and contacts from your CRM, Payment Processor, and 4000+ tools via
             Zapier or API.
@@ -326,15 +326,21 @@ export default function Home() {
             alt="integrations"
             width={700}
             height={700}
-            className="rounded-3xl"
+            className="rounded-3xl mb-10"
           />
-        </div> */}
-        {/* <div className="items-center justify-center flex flex-col mt-20">
-          <h3 className="items-center text-center text-4xl font-bold mb-10 text-gray-400">
+          <p className="md:text-4xl text-2xl md:px-[250px] font-bold text-gray-500 block md:hidden">
+            <span className="text-black">Integrate anywhere. </span>‍Sync data
+            and contacts from your CRM, Payment Processor, and 4000+ tools via
+            Zapier or API.
+          </p>
+        </div>
+
+        <div className="items-center justify-center flex flex-col  mt-20">
+          <h3 className="items-center text-center text-4xl font-bold mb-10 text-gray-400 hidden md:block">
             <span className="text-black">...and much more.</span> ‍<br />
             Join thousands making the switch.
           </h3>
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3  gap-6">
             <FeatureCard
               icon="/icon/deliverability.svg"
               title="Deliverability by Mailgun®"
@@ -366,15 +372,15 @@ export default function Home() {
               subtitle="Our sending infrastructure is managed by the same folks Microsoft and Lyft trust for important password-reset emails."
             />
           </div>
-        </div> */}
+        </div>
       </section>
 
-      {/* <section className="mt-20 px-28 bg-slate-200 py-40">
-        <h2 className=" text-4xl font-bold mb-10 text-gray-400 ">
+      <section className="mt-20 md:px-28 bg-slate-200 py-40">
+        <h2 className=" md:text-4xl  text-2xl font-bold mb-10 text-gray-400 ">
           <span className="text-black"> Powering </span>businesses of <br />
           all shapes and sizes.
         </h2>
-        <div className="flex items-center gap-9">
+        <div className="flex md:flex-row flex-col items-center md:gap-9">
           <BusinessCard
             img="/images/joe.webp"
             badge="Retall"
@@ -400,12 +406,14 @@ export default function Home() {
             icon="/images/cl-makebuild.webp"
           />
         </div>
-      </section> */}
+      </section>
 
-      {/* <section className="mt-40 items-center text-center flex flex-col">
+      <section className="md:mt-40 items-center text-center leading-none flex flex-col  py-24">
         <div>
-          <h1 className="text-[100px] font-bold ">Start now.</h1>
-          <p className="text-gray-500 font-medium mb-5">
+          <h1 className="md:text-[100px] text-4xl font-bold mb-5">
+            Start now.
+          </h1>
+          <p className="text-gray-500 text-xl font-medium mb-5 px-10">
             Your first 1,000 subscribers are totally free.
           </p>
           <button className="text-white text-xl font-medium bg-sky-700 px-4 py-2 rounded-xl mb-10">
@@ -420,9 +428,97 @@ export default function Home() {
             height={1600}
           />
         </div>
-      </section> */}
+      </section>
 
-      {/* <footer className="items-center flex flex-row justify-between px-8 py-32 bg-black">
+      <footer className=" bg-black">
+        <div className="py-28 md:px-40 px-10">
+          <div className="grid md:grid-cols-5 grid-cols-2  ">
+            <div>
+              <Image
+                src="/icon/white-logo.png"
+                alt="feature-integrations"
+                height={40}
+                width={40}
+              />
+            </div>
+            <div className="flex flex-col">
+              <div>
+                <p className="text-[#DDDDDD] text-[16px] font-bold py-6">
+                  Product
+                </p>
+              </div>
+              <div className="text-[#666666] text-[16px] font-medium flex flex-col gap-3">
+                <a href="">Overview</a>
+                <a href="">Email newsletters</a>
+                <a href="">Marketing automation</a>
+                <a href="">Webflow integration</a>
+                <a href="">status</a>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div className="text-[#DDDDDD] text-[16px] font-bold py-6">
+                  <p>Support</p>
+                </div>
+                <div className="text-[#666666] text-[16px] font-medium flex flex-col gap-3">
+                  <a href="">Help center</a>
+                  <a href="">Api docs</a>
+                  <a href="">Email us</a>
+                </div>
+              </div>
+              <div className="">
+                <div className="text-[#DDDDDD] text-[16px] font-bold py-6">
+                  <p>Resources</p>
+                </div>
+                <div className="text-[#666666] text-[16px] font-medium flex flex-col gap-3">
+                  <a href="">Emailspiration</a>
+                  <a href="">Email Marketing 101</a>
+                  <a href="">Deliverability Checklist</a>
+                  <a href="">Guides</a>
+                  <a href="">Blog</a>
+                </div>
+              </div>
+            </div>
+            <div className="">
+              <div className="text-[#DDDDDD] text-[16px] font-bold py-6">
+                <p>Use cases</p>
+              </div>
+              <div className="text-[#666666] text-[16px] font-medium flex flex-col gap-3">
+                <a href="">Startups</a>
+                <a href="">Mobile Apps</a>
+                <a href="">Events</a>
+                <a href="">Education</a>
+                <a href="">Restaurants</a>
+                <a href="">Internal Comms</a>
+                <a href="">Bloggers</a>
+                <a href="">Digital Products</a>
+                <a href="">Venture Capital</a>
+                <a href="">View all</a>
+              </div>
+            </div>
+            <div className="">
+              <div>
+                <p className="text-[#DDDDDD] text-[16px] font-bold py-6">
+                  Company
+                </p>
+              </div>
+              <div className=" text-[#666666] text-[16px] font-medium flex flex-col gap-3">
+                <a href="">Pricing</a>
+                <a href="">Follow us on Twitter</a>
+                <a href="">Email us</a>
+                <a href="">Policies</a>
+                <a href="">GDPR</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  );
+}
+
+{
+  /* <footer className="items-center flex flex-row justify-between px-8 py-32 bg-black">
         <div className="">
           <h6 className="text-white text-xl font-bold">Product</h6>
           <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
@@ -482,7 +578,5 @@ export default function Home() {
             <p>Terms</p>
           </div>
         </div>
-      </footer> */}
-    </main>
-  );
+      </footer> */
 }

@@ -3,7 +3,7 @@ import React from "react";
 
 const BusinessCard = ({ img, badge, subtitle, icon }) => {
   return (
-    <div className="max-w-[490px] bg-white p-8 rounded-xl">
+    <div className="md:max-w-[490px] bg-white md:p-8 rounded-xl">
       <Image
         src={img}
         alt="feature-icon"
@@ -16,7 +16,7 @@ const BusinessCard = ({ img, badge, subtitle, icon }) => {
           {" "}
           <p className=" text-black mb-2">{badge}</p>
         </button>
-        <p className="text-xl font-semibold text-gray-600 mb-10 px-20">
+        <p className="text-xl font-semibold text-gray-600 mb-10 md:px-20">
           {subtitle}
         </p>
       </div>
