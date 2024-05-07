@@ -5,6 +5,7 @@ import Review from "@/components/review";
 import FeatureCard from "@/components/feature-card";
 import BusinessCard from "@/components/business-card";
 import Link from "next/link";
+import DynamicSlides from "@/components/slider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,6 +13,7 @@ export default function Home() {
   return (
     <main className="max-w-[2200px] ">
       {/* <Navbar /> */}
+      <DynamicSlides />
 
       <section className="py-14 flex flex-col justify-center items-center px-5">
         <div className="max-w-[700px] text-center">
@@ -416,7 +418,7 @@ export default function Home() {
           <p className="text-gray-500 text-xl font-medium mb-5 px-10">
             Your first 1,000 subscribers are totally free.
           </p>
-          <button className="text-white text-xl font-medium bg-sky-700 px-4 py-2 rounded-xl mb-10">
+          <button className="text-white text-xl font-medium   bg-blue-500 px-4 py-2 rounded-xl mb-10">
             Join Free
           </button>
         </div>
@@ -432,13 +434,21 @@ export default function Home() {
 
       <footer className=" bg-black">
         <div className="py-28 md:px-40 px-10">
-          <div className="grid md:grid-cols-5 grid-cols-2  ">
-            <div>
+          <Image
+            src="/icon/white-logo.png"
+            alt="feature-integrations"
+            height={40}
+            width={40}
+            className="block md:hidden"
+          />
+          <div className="grid md:grid-cols-5 grid-cols-2  justify-between ">
+            <div className="hidden md:block">
               <Image
                 src="/icon/white-logo.png"
                 alt="feature-integrations"
                 height={40}
                 width={40}
+                className=""
               />
             </div>
             <div className="flex flex-col">
