@@ -5,15 +5,17 @@ import Review from "@/components/review";
 import FeatureCard from "@/components/feature-card";
 import BusinessCard from "@/components/business-card";
 import Link from "next/link";
-import DynamicSlides from "@/components/slider";
+import CardSlider from "@/components/slider";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
     <main className="max-w-[2200px] ">
-      {/* <Navbar /> */}
-      <DynamicSlides />
+      <Navbar />
 
       <section className="py-14 flex flex-col justify-center items-center px-5">
         <div className="max-w-[700px] text-center">
@@ -76,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="grid grid-cols-4 md:grid-cols-7 gap-4 md:px-[350px]">
+      <section className="grid grid-cols-4 md:grid-cols-7 gap-4  px-2 md:px-[350px]">
         <Image
           src="/images/1-mccann.webp"
           alt="1-mccann"
@@ -205,7 +207,7 @@ export default function Home() {
             width={1000}
             height={1000}
           />
-          <p className="md:text-[38px]  text-xl font-bold text-gray-300 md:leading-10 md:px-40">
+          <p className="md:text-[38px]  text-xl font-bold text-gray-300 md:leading-10  px-5 md:px-40">
             <span className="text-black">Easy as writing a doc.</span> No more
             clunky email builders. Collaborate live with your team like you're
             in Notion or Google Docs.
@@ -218,7 +220,7 @@ export default function Home() {
             width={1200}
             height={1200}
           />
-          <p className="md:text-[38px] text-xl mt-10 font-bold md:leading-10 text-gray-300 md:px-52">
+          <p className="md:text-[38px] text-xl mt-10 font-bold md:leading-10 text-gray-300 px-5 md:px-52">
             <span className="text-black">
               Branded, modern email in 1 click.
             </span>
@@ -377,36 +379,41 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20 md:px-28 bg-slate-200 py-40">
-        <h2 className=" md:text-4xl  text-2xl font-bold mb-10 text-gray-400 ">
-          <span className="text-black"> Powering </span>businesses of <br />
-          all shapes and sizes.
+      <section className="px-10 md:bg-slate-200 mt-20 md:px-28  md:py-32">
+        <h2 className=" md:text-4xl  text-2xl font-bold mb-10 text-gray-400 md:px-40">
+          <span className="text-black flex text-center"> Powering </span>
+          businesses of all shapes and sizes.
         </h2>
-        <div className="flex md:flex-row flex-col items-center md:gap-9">
-          <BusinessCard
-            img="/images/joe.webp"
-            badge="Retall"
-            subtitle="Joe & The Juice use audience to keep thousend of emploess on the loop across 300+ global location not into ther are not."
-            icon="/images/cl-joe.webp"
-          />
-          <BusinessCard
-            img="/images/weekend.webp"
-            badge="Finance"
-            subtitle="Rayan Hoover (founder of product hunt ) and vedika jens use audience rn ther popular newstleer about runing a "
-            icon="/images/signatureblock.webp"
-          />
-          <BusinessCard
-            img="/images/soho.webp"
-            badge="Entertainment"
-            subtitle="Soho Live Music Club use audience to promoteevents and drive sels at their 3 award-wining music venus in heart."
-            icon="/images/cl-soho.webp"
-          />
-          <BusinessCard
-            img="/images/makebuild.webp"
-            badge="Agencles"
-            subtitle="Make Build, a shofify and webflow enterprice and agency partner use audinceful to keep their team inspired."
-            icon="/images/cl-makebuild.webp"
-          />
+        <div className="items-center justify-center block md:hidden">
+          <CardSlider />
+        </div>
+        <div className="hidden md:block ">
+          <div className=" flex flex-row items-center md:gap-9">
+            <BusinessCard
+              img="/images/joe.webp"
+              badge="Retall"
+              subtitle="Joe & The Juice use audience to keep thousend of emploess on the loop across 300+ global location not into ther are not."
+              icon="/images/cl-joe.webp"
+            />
+            <BusinessCard
+              img="/images/weekend.webp"
+              badge="Finance"
+              subtitle="Rayan Hoover (founder of product hunt ) and vedika jens use audience rn ther popular newstleer about runing a "
+              icon="/images/signatureblock.webp"
+            />
+            <BusinessCard
+              img="/images/soho.webp"
+              badge="Entertainment"
+              subtitle="Soho Live Music Club use audience to promoteevents and drive sels at their 3 award-wining music venus in heart."
+              icon="/images/cl-soho.webp"
+            />
+            <BusinessCard
+              img="/images/makebuild.webp"
+              badge="Agencles"
+              subtitle="Make Build, a shofify and webflow enterprice and agency partner use audinceful to keep their team inspired."
+              icon="/images/cl-makebuild.webp"
+            />
+          </div>
         </div>
       </section>
 
@@ -525,68 +532,4 @@ export default function Home() {
       </footer>
     </main>
   );
-}
-
-{
-  /* <footer className="items-center flex flex-row justify-between px-8 py-32 bg-black">
-        <div className="">
-          <h6 className="text-white text-xl font-bold">Product</h6>
-          <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
-            <Link href="/Overview">Overview</Link>
-            <Link href="/Email newslatters">Email newslatters</Link>
-            <Link href="/Marketing automation">Marketing automation</Link>
-            <Link href="/Webflow integration">Webflow integration</Link>
-            <Link href="/use cases">use cases</Link>
-          </div>
-        </div>
-
-        <div>
-          <h6 className="text-white text-xl font-bold">Resources</h6>
-          <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
-            <Link href="/Help center">Help center</Link>
-            <Link href="/API docs">API docs</Link>
-            <Link href="/Changelog">Changelog</Link>
-            <Link href="/Blog">Blog</Link>
-            <Link href="/Emailspiration">Emailspiration</Link>
-          </div>
-        </div>
-
-        <div>
-          <h6 className="text-white text-xl font-bold">Company</h6>
-          <div className="flex flex-col gap-3 text-[#666666] text-xl font-medium">
-            <Link href="/Pricing">Pricing</Link>
-            <Link href="/Follow us on Twitter">Follow us on Twitter</Link>
-            <Link href="/Email us">Email us</Link>
-            <Link href="/Policies">Policies</Link>
-            <Link href="/GDPR">GDPR</Link>
-          </div>
-        </div>
-
-        <div className="">
-          <h6 className="text-white text-xl font-bold">Monthly newsletter</h6>
-          <p className="text-[#666666] text-xl mb-5 mt-5">
-            Get pro tips for automating your marketing workflows <br />
-            and be the first to hear about new tools and features:
-          </p>
-          <div className="flex flex-grow">
-            <input
-              placeholder="Enter your email"
-              className="px-5 py-2 rounded-l-md"
-            />
-            <button className="">
-              {" "}
-              <Image
-                src="/icon/right-arrow.png"
-                alt="subscribe"
-                width={20}
-                height={20}
-              />
-            </button>
-          </div>
-          <div className="text-[#666] mt-5 flex gap-5">
-            <p>Privacy</p>
-            <p>Terms</p>
-          </div>
-        </div>
-      </footer> */
 }

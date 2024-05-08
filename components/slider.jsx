@@ -1,48 +1,54 @@
-import React, { useState } from "react";
+import React from "react";
 import Slider from "react-slick";
+import BusinessCard from "./business-card";
 
-function DynamicSlides() {
-  const [slides, setSlides] = useState([1, 2, 3, 4, 5, 6]);
-  const handleClick = () => {
-    setSlides(
-      slides.length === 6 ? [1, 2, 3, 4, 5, 6, 7, 8, 9] : [1, 2, 3, 4, 5, 6]
-    );
-  };
-  const settings = {
+const CardSlider = () => {
+  var settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
   return (
-    <div
-      className="slider-container"
-      style={{
-        marginLeft: "auto",
-        marginRight: "auto",
-        width: "400px",
-      }}
-    >
-      <button className="button" onClick={handleClick}>
-        Click to change slide count
-      </button>
+    <div style={{ marginTop: 100 }}>
+      {" "}
       <Slider {...settings}>
-        <div className="bg-green-400">
-          <h1>one</h1>
+        <div>
+          <BusinessCard
+            img="/images/joe.webp"
+            badge="Retall"
+            subtitle="Joe & The Juice use audience to keep thousend of emploess on the loop across 300+ global location not into ther are not."
+            icon="/images/cl-joe.webp"
+          />
         </div>
-        <div className="bg-red-400">
-          <h1>one</h1>
+        <div>
+          <BusinessCard
+            img="/images/weekend.webp"
+            badge="Finance"
+            subtitle="Rayan Hoover (founder of product hunt ) and vedika jens use audience rn ther popular newstleer about runing a "
+            icon="/images/signatureblock.webp"
+          />
         </div>
-        <div className="bg-blue-400">
-          <h1>one</h1>
+        <div>
+          <BusinessCard
+            img="/images/soho.webp"
+            badge="Entertainment"
+            subtitle="Soho Live Music Club use audience to promoteevents and drive sels at their 3 award-wining music venus in heart."
+            icon="/images/cl-soho.webp"
+          />
         </div>
-        <div className="bg-lime-400">
-          <h1>one</h1>
+        <div>
+          <BusinessCard
+            img="/images/makebuild.webp"
+            badge="Agencles"
+            subtitle="Make Build, a shofify and webflow enterprice and agency partner use audinceful to keep their team inspired."
+            icon="/images/cl-makebuild.webp"
+          />
         </div>
       </Slider>
     </div>
   );
-}
+};
 
-export default DynamicSlides;
+export default CardSlider;
