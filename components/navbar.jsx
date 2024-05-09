@@ -16,11 +16,11 @@ const Navbar = () => {
         />
         <p className="text-xl  text-[#222222] font-bold">audienceful</p>
       </Link>
-      <div className="block md:hidden">
+      <div className="block lg:hidden">
         <IoMenu />
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <div className=" flex  items-center flex-row gap-8 ">
           <Link
             href="/features"

@@ -417,7 +417,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="md:mt-40 items-center text-center leading-none flex flex-col  py-24">
+      <section className="md:mt-40 items-center text-center leading-none flex flex-col mt-20">
         <div>
           <h1 className="md:text-[100px] text-4xl font-bold mb-5">
             Start now.
@@ -466,7 +466,7 @@ export default function Home() {
               </div>
               <div className="text-[#666666] text-[16px] font-medium flex flex-col gap-3">
                 <a href="">Overview</a>
-                <a href="">Email newsletters</a>
+                <a href="">Email </a>
                 <a href="">Marketing automation</a>
                 <a href="">Webflow integration</a>
                 <a href="">status</a>
